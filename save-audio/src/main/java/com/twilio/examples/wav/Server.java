@@ -7,7 +7,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 public class Server {
 
     public static void main(String[] args) {
-        port(8080);
+        port(8082);
         webSocket("/voice", WebSocketHandler.class);
         post("/twiml", (req, res) -> new ModelAndView(null, "twiml.mustache"),
                 new MustacheTemplateEngine());
